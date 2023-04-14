@@ -1,0 +1,84 @@
+em-card:
+	https://calendar.auburn.edu/
+	https://calendar.uga.edu/
+	https://calendar.northeastern.edu/#tabs-41401566423520-41401566441956
+	https://calendar.tcu.edu/
+	https://calendar.ncsu.edu/
+	https://calendar.unt.edu/department/division_of_student_affairs/calendar
+	https://calendar.missouri.edu/
+	https://calendar.college.harvard.edu/#tabs-31689107113677-31689107119768
+	https://calendar.ku.edu/
+	https://calendar.usc.edu/
+	https://events.miami.edu/
+
+cat_2:
+	https://events.stanford.edu/
+
+
+event_item:
+	https://calendar.uky.edu/
+	https://calendar.usm.edu/
+	https://calendar.utdallas.edu/
+	https://calendar.colorado.edu/calendar
+	https://events.louisville.edu/
+	https://events.bc.edu/
+	https://events.trinity.edu/
+	https://happenings.wustl.edu/
+
+
+Unique Easy:
+	https://events.uiowa.edu/
+	https://events.olemiss.edu/?start_date=20230409&end_date=20240408
+	https://community.ucla.edu/spring-2023/week-1
+	https://www.du.edu/calendar
+	https://asuevents.asu.edu/
+	https://cals.arizona.edu/content/student-events
+
+
+Interactive:
+	https://calendar.sewanee.edu/MasterCalendar/MasterCalendar.aspx
+
+
+Unique:
+	https://urec.utdallas.edu/events/
+	https://events.tulane.edu/calendar
+
+
+JS:
+	a./event/{id}
+		https://engage.tcu.edu/events
+		https://maroonlink.tamu.edu/Events
+		https://connect.smu.edu/events
+		https://rockchalkcentral.ku.edu/Events
+		https://pin.gsu.edu/events
+
+	Unique:
+		https://www.centre.edu/events
+		https://events.colby.edu/month
+		https://events.jhu.edu/
+		https://events.berkeley.edu/
+		https://events.usf.edu/home
+		https://volink.utk.edu/events
+		https://calendar.tamu.edu/all
+		https://events.vanderbilt.edu/
+		https://www.msstate.edu/events
+		https://calendar.yale.edu/cal/main/showEventList.rdo
+		https://www.montana.edu/calendar/
+		https://home.dartmouth.edu/events
+		https://www.unc.edu/events/
+		https://universitylife.columbia.edu/events
+		https://www.colorado.edu/events/
+		https://www.virginia.edu/calendar
+		https://samford.presence.io/events
+		https://www.babson.edu/about/events/
+
+		Interactive:
+			https://www.pepperdine.edu/events/
+			https://news.harvard.edu/gazette/harvard-events/events-calendar/
+
+		What:
+			https://gatech.campuslabs.com/engage/events
+			https://connect.wofford.edu/myWofford/calendar/default.aspx
+
+Not working:
+	https://events.iu.edu/day

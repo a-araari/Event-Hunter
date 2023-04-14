@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Event Hunter</title>
+  <style type="text/css">
+
+    .link-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .link-list li {
+      margin-bottom: 10px;
+    }
+    .link-list li:last-child {
+      margin-bottom: 0;
+    }
+    .link-list li span {
+    	text-align: center;
+    	display: inline-block;
+      width: 30px;
+    }
+    .link-list a {
+      display: inline;
+      color: #333;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.2s ease-in-out;
+    }
+    .link-list a:hover {
+      color: #dd2222;
+    }
+  </style>
+</head>
+<body>
+  <ul class="link-list">
+    {% for website in websites %}
+      <li><span>{{ forloop.counter }}</span><a href="/?url={{ website }}&page=1">{{ website }}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

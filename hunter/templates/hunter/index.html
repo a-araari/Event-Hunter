@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Event Hunter</title>
+  <style type="text/css">
+    form {
+      margin-bottom: 40px;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container input[type="text"] {
+      width: 60%;
+      max-width: 600px;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 2px solid red;
+      border-top: 2px solid red;
+      border-left: 2px solid red;
+      outline: none;
+    }
+    .container button[type="submit"] {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      margin: 8px 0;
+      cursor: pointer;
+    }
+    .container a {
+      margin: 10px 0;
+      display: inline;
+      color: #dd2222;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.2s ease-in-out;
+    }
+    .container a:hover {
+      color: #333;
+    }
+
+    .link-list {
+      list-style: none;
+      margin: 0;
+      margin-left: 5px;
+      padding: 0;
+    }
+    .link-list li {
+      margin-bottom: 10px;
+    }
+    .link-list li:last-child {
+      margin-bottom: 0;
+    }
+    .link-list a {
+      display: inline;
+      color: #333;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.2s ease-in-out;
+    }
+    .link-list a:hover {
+      color: #dd2222;
+    }
+  </style>
+</head>
+<body>
+  <form type="get" action=".">
+    <div class="container">
+      <a href="/supported-websites">See supported websites</a>
+    </div>
+
+    <div class="container">
+      <input type="text" name="url" value="{{ url }}" placeholder="Search...">
+      <button type="submit">Search</button>
+    </div>
+
+    <div class="container">
+      <label for="page">Page N°</label>
+      <input type="number" id="page" name="page" min="1" value="{{ page|default:"1" }}"style="width: 30px;">
+      <span style="padding: 0 20px;font-size: 20px;font-weight: bold;color: red;">/</span>
+      <input type="checkbox" id="all-pages" name="page" value="all">
+      <label for="all-pages">All Pages</label>
+    </div>
+  </form>
+
+  <ul class="link-list">
+    {% for event in events %}
+      <li><a href="event/?url={{ event }}">{{ event }}</a></li>
+    {% endfor %}
+  </ul>
+  <script>
+  const allPagesCheckbox = document.getElementById("all-pages");
+  const pageInput = document.getElementById("page");
+
+  allPagesCheckbox.addEventListener("change", function() {
+    if (allPagesCheckbox.checked) {
+      pageInput.disabled = true;
+    } else {
+      pageInput.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
